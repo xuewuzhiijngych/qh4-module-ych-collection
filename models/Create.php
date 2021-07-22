@@ -5,7 +5,11 @@ namespace qh4module\collection\models;
 
 use qttx\helper\ArrayHelper;
 
-
+/**
+ * tbl_collection表新增一条
+ * Class Create
+ * @package qh4module\collection\models
+ */
 class Create extends CollectionModel
 {
     /**

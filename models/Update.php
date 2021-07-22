@@ -5,6 +5,11 @@ namespace qh4module\collection\models;
 
 use qttx\helper\ArrayHelper;
 
+/**
+ * tbl_collection表更新一条
+ * Class Update
+ * @package qh4module\collection\models
+ */
 class Update extends CollectionModel
 {
     /**

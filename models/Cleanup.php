@@ -1,20 +1,22 @@
 <?php
 
+
 namespace qh4module\collection\models;
+
 
 use qttx\helper\ArrayHelper;
 
 /**
- * tbl_collection 表删除一条
- * Class Delete
+ * 清空收藏
+ * Class Cleanup
  * @package qh4module\collection\models
  */
-class Delete extends CollectionModel
+class Cleanup extends CollectionModel
 {
     /**
-     * @var int 接收参数,必须：ID
+     * @var int 接收参数,必须：user_id 用户id
      */
-    public $id;
+    public $user_id;
 
     /**
      * @inheritDoc
@@ -22,7 +24,7 @@ class Delete extends CollectionModel
     public function rules()
     {
         return ArrayHelper::merge([
-            ['id', 'required']
+            ['user_id', 'required']
         ], parent::rules());
     }
 
@@ -34,8 +36,9 @@ class Delete extends CollectionModel
         $this->external->getDb()
             ->update($this->external->TableName())
             ->col('del_time', time())
-            ->whereArray(['id' => $this->id])
+            ->whereArray(['user_id' => $this->user_id])
             ->query();
         return true;
     }
+
 }

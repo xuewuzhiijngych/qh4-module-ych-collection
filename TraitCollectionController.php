@@ -8,6 +8,7 @@ use qh4module\collection\models\Index;
 use qh4module\collection\models\Create;
 use qh4module\collection\models\Update;
 use qh4module\collection\models\Delete;
+use qh4module\collection\models\Cleanup;
 
 trait TraitCollectionController
 {
@@ -56,7 +57,7 @@ trait TraitCollectionController
 
 
     /**
-     * 删除
+     * 删除/取消收藏
      * @return array
      */
     public function actionDelete()
@@ -66,4 +67,17 @@ trait TraitCollectionController
         ]);
         return $this->runModel($model);
     }
+
+    /**
+     * 清空收藏
+     * @return array
+     */
+    public function actionCleanup()
+    {
+        $model = new Cleanup([
+            'external' => $this->ext_collection(),
+        ]);
+        return $this->runModel($model);
+    }
+
 }
