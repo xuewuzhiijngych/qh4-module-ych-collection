@@ -1,0 +1,14 @@
+{
+    "name": "qh4-module-ych/collection",
+    "description": "收藏模块",
+    "authors": [
+        {
+            "name": "xuewuzhiijngych",
+            "email": "601266867@qq.com"
+        }
+    ],
+    "require": {},
+    "license": "MIT",
+    "minimum-stability": "dev"
+}
+
