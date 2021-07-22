@@ -12,16 +12,6 @@ QH4框架扩展模块-收藏模块
 ### 助手方法
 
 ```php
- /**
-   /**
-     * 获取省市区文字
-     * @param $city_id
-     * @param ExtAddress|null $external
-     * @return array|string
-     */
-    public static function getCityPcaTag($city_id, ExtAddress $external = null)
-    {
-    }
 ```
 
 ### 方法列表
@@ -29,24 +19,22 @@ QH4框架扩展模块-收藏模块
 ```php
       /**
      * 列表
-     * 可选参数 user_id 查询指定用户收货地址列表
      * @return array
      */
     public function actionIndex()
     {
     }
 ```
-
 ```php
     /**
      * 新增
      * @return array
+     * 当传递snapshot参数时，无论snapshot_type传递哪种，snapshot全部要以json格式传递
      */
     public function actionCreate()
     {
     }
 ```
-
 ```php
     /**
      * 更新
@@ -63,16 +51,6 @@ QH4框架扩展模块-收藏模块
      * @return array
      */
     public function actionDelete()
-    {
-    }
-```
-
-```php
-    /**
-     * 设置默认
-     * @return array
-     */
-    public function actionSetDefault()
     {
     }
 ```
