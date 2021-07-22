@@ -50,7 +50,7 @@ class Update extends CollectionModel
     public function rules()
     {
         return ArrayHelper::merge([
-            [['id'],'required']
+            [['user_id', 'item_id'], 'required']
         ], parent::rules());
     }
 
